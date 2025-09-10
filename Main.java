@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Remuneravel contrato = new Contrato(5000f);
         Remuneravel estagio = new Estagio(1200f);
+        Remuneravel clt = new CLT(4000f, 600f);
 
         Folha folha = new Folha();
 
@@ -10,5 +11,8 @@ public class Main {
 
         folha.calcular(estagio);
         System.out.println("Bolsa estágio: " + folha.getSaldo());
+
+        folha.calcular(clt);
+        System.out.println("CLT: " + folha.getSaldo());
     }
 }
